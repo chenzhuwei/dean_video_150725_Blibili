@@ -1,0 +1,175 @@
+<!--{template common/header}-->
+<!--[name][迪恩网络-视频风视频热讯][/name]-->
+<!--{eval $list = array();}-->
+<!--{eval $wheresql = category_get_wheresql($cat);}-->
+<!--{eval $list = category_get_list($cat, $wheresql, $page);}-->
+
+<style type="text/css">
+body{ background:#fff;}
+.bm_h{ padding:10px 0;}
+
+</style>
+
+<div id="pt" class="bm cl">
+	<div class="z">
+		<a href="./" class="nvhm" title="{lang homepage}">$_G[setting][bbname]</a> <em>&rsaquo;</em>
+		<a href="$_G[setting][navs][1][filename]">{lang portal}</a> <em>&rsaquo;</em>
+		<!--{loop $cat[ups] $value}--> <a href="{$portalcategory[$value['catid']]['caturl']}">$value[catname]</a><em>&rsaquo;</em><!--{/loop}-->
+		$cat[catname]
+	</div>
+</div>
+
+<!--{ad/text/wp a_t}-->
+<style id="diy_style" type="text/css"></style>
+
+<div class="wp">
+	<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+
+<div class="deanuilist">
+<ul><!--[diy=deanuilist]--><div id="deanuilist" class="area"></div><!--[/diy]--><div class="clear"></div></ul>
+</div>
+
+<div class="clear"></div>
+
+
+<div id="ct" class="ct2 wp cl deanbox">
+	<div class="deanwpl">
+	<!--[diy=listcontenttop]-->
+	<div id="listcontenttop" class="area"></div>
+	<!--[/diy]-->
+	<div class="bm">
+
+    	<div class="bm_h cl deanfff ">
+		<!--{ad/articlelist/mbm hm/1}--><!--{ad/articlelist/mbm hm/2}-->
+		<!--[diy=listcontenttop]--><div id="listcontenttop" class="area"></div><!--[/diy]-->
+        <!--{if $_G[setting][rssstatus] && !$_GET['archiveid']}--><a href="portal.php?mod=rss&catid=$cat[catid]" class="y xi2 rss" target="_blank" title="RSS">订阅</a><!--{/if}-->
+            <!--{if ($_G['group']['allowpostarticle'] || $_G['group']['allowmanagearticle'] || $categoryperm[$catid]['allowmanage'] || $categoryperm[$catid]['allowpublish']) && empty($cat['disallowpublish'])}-->
+            <a href="portal.php?mod=portalcp&ac=article&catid=$cat[catid]" class="y xi2 addnew" title="发布文章">发布</a>
+            <!--{/if}-->
+            <h1 class="xs2">$cat[catname]</h1>
+        </div>
+		
+        <!--[diy=listloopbottom]--><div id="listloopbottom" class="area"></div><!--[/diy]-->
+        <div class="clear"></div>
+        <div class="deanpiclist top15">
+        	<ul>
+            	<!--{loop $list['list'] $value}-->
+				<!--{eval $highlight = article_title_style($value);}-->
+				<!--{eval $article_url = fetch_article_url($value);}-->
+        		<li class="deanshadow deanw714 deanfff">
+                    <div class="deanpiclic">
+                        <div class="deanpiclicl">
+                            <!--{if $value[pic]}--><a href="$article_url" target="_blank"><img src="$value[pic]" alt="$value[title]" width="230" height="150"/></a>
+							<!--{else}--><a href="$article_url" target="_blank"><img src="$_G['style'][styleimgdir]/nopic.jpg" width="230" height="150" /></a><!--{/if}-->
+							<a href="$article_url" target="_blank" class="deanhover"></a>
+
+                        </div>
+                        <div class="deanpiclicr">
+                            <h2><a href="$article_url" target="_blank" class="xi2" $highlight>$value[title]</a> <!--{if $value[status] == 1}-->({lang moderate_need})<!--{/if}--></h2>
+                            <div class="clear"></div>
+                            <div class="deanpicsummary">$value[summary]&hellip;&hellip;</div>
+							 <div class="clear"></div>
+							<div class="deanliicon">
+								<div class="deanicontype">
+								<!--{if $value[catname] && $cat[subs]}--><a href="{$portalcategory[$value['catid']]['caturl']}" class="xi2">$value[catname]</a>&nbsp;&nbsp;<!--{/if}-->
+								</div>
+
+								<div class="deaniconcomment">
+								{lang view_publisher}: <a href="home.php?mod=space&uid=$article[uid]">$value[username]</a>
+
+
+								</div>
+								<div class="clear"></div>
+
+							</div>
+							</div>
+
+							<div class="deanpiclih">
+								 <div class="deanicondate"><span> $value[dateline]</span></div>
+								 <a href="$article_url" target="_blank" class="deanread">开始阅读</a>
+
+							</div>
+
+
+                           
+                        
+                        <div class="clear"></div>
+                        <!--<div class="deanarticecomment"><a href="{url}" target="_blank">$value[view]</a></div>-->
+                    </div>
+				</li>	
+                <!--{/loop}-->
+        	</ul>
+							 <script type="text/javascript">
+								jq(".deanpiclist ul li").each(function(s){
+								jq(".deanpiclicl").hover(
+								function(){
+								jq(this).children(".deanhover").show();
+								},
+								function(){
+								jq(this).children(".deanhover").hide();
+								})
+								})
+								</script>
+
+        </div>
+		</div>
+		<div class="clear"></div>
+		<!--{ad/articlelist/mbm hm/3}--><!--{ad/articlelist/mbm hm/4}-->
+		<!--{if $list['multi']}--><div class="deanwpr">
+		<div class="pgs cl">
+		{$list['multi']}
+		</div>
+		</div><!--{/if}-->
+
+		<!--[diy=diycontentbottom]--><div id="diycontentbottom" class="area"></div><!--[/diy]-->
+
+	</div>
+	<div class="deanwpr">
+		<div class="deanqd"></div>
+		<div class="clear"></div>
+
+		<div class="deanadr"><!--[diy=deanadr]--><div id="deanadr" class="area"></div><!--[/diy]--></div>
+		<div class="clear"></div>
+
+		<!--{if $cat[subs]}-->
+       <div class="deanforumhot">
+            <h2><span>{lang sub_category}</span></h2>
+			<div class="clear"></div>
+            <ul>
+            <!--{eval $i = 1;}-->
+            <!--{loop $cat[subs] $value}-->
+            <!--{if $i != 1}--><!--{/if}--><li><a href="{$portalcategory[$value['catid']]['caturl']}" >$value[catname]</a></li><!--{eval $i--;}-->
+            <!--{/loop}-->
+            <div class="clear"></div>
+            </ul>
+        </div>
+        <!--{/if}-->
+        <div class="clear"></div>
+		<script type="text/javascript">
+        	jq(".deanforumhot ul li:odd").css("float","right");
+        </script>
+		<div class="clear"></div>
+		<div class="deanmonth">
+		<h3><span>企业新闻</span></h3>
+                <div class="clear"></div>
+                <ul>
+                	<!--[diy=deanmonth]--><div id="deanmonth" class="area"></div><!--[/diy]-->
+                </ul>
+
+                <div class="clear"></div>
+            </div>
+            
+            </div>
+            
+            </div>
+
+	</div>
+	<div class="clear"></div>
+	<div class="wp mtn">
+        <!--[diy=diy3]--><div id="diy3" class="area"></div><!--[/diy]-->
+    </div>
+
+</div>
+
+<!--{template common/footer}-->

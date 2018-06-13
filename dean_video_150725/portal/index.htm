@@ -1,0 +1,173 @@
+
+ <!--{template common/header}-->
+<style id="diy_style" type="text/css"></style>
+<div class="deanwp wp">
+    <div class="deanbox">
+        <div class="deanboxl">
+            <div class="deanboxlt">
+                <ul class="deanboxltl"><!--[diy=deanboxltl]--><div id="deanboxltl" class="area"></div><!--[/diy]--></ul>
+                <div class="deanhdp"><!--[diy=deanhdp]--><div id="deanhdp" class="area"></div><!--[/diy]--></div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="deanboxlb"><ul><!--[diy=deanboxlb]--><div id="deanboxlb" class="area"></div><!--[/diy]--><div class="clear"></div></ul></div>
+        </div>
+        <div class="deanboxr">
+            <div class="deanad"><!--[diy=deanad]--><div id="deanad" class="area"></div><!--[/diy]--></div>
+            <div class="clear"></div>
+            <div class="deanad1"><!--[diy=deanad1]--><div id="deanad1" class="area"></div><!--[/diy]--></div>
+            <div class="clear"></div>
+            <div class="deanad2"><!--[diy=deanad2]--><div id="deanad2" class="area"></div><!--[/diy]--></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div class="deanbox2">
+        <div class="deanbox2l">
+            <div class="deantitle">
+                <span>排行榜</span>
+                <ul class="deantabname">
+                    <li class="cur">今日排行</li>
+                    <li>本周排行</li>
+                    <div class="clear"></div>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+            <div class="deantabc">
+                <ul>
+                    <li style="display:block;"><dl class="deanmvrank"><!--[diy=deanmvrank]--><div id="deanmvrank" class="area"></div><!--[/diy]--><div class="clear"></div></dl></li>
+                    <li><dl class="deanmvrank"><!--[diy=deanmvrank1]--><div id="deanmvrank1" class="area"></div><!--[/diy]--><div class="clear"></div></dl></li>
+                </ul>
+            </div>
+            <script type="text/javascript">
+                jq(".deantabname li").each(function(s){
+                    jq(this).click(function(){
+                        jq(this).addClass("cur").siblings().removeClass("cur");
+                        jq(".deantabc li").eq(s).show().siblings().hide();
+                        })
+                    })
+            </script>
+            <script type="text/javascript">
+                jq(".deanmvrank .deancover").each(function(s){
+                    jq(this).hover(
+                        function(){
+                            jq(this).children(".deanauthorname").animate({bottom:"0px"},100);
+                        },
+                        function(){
+                            jq(this).children(".deanauthorname").animate({bottom:"-32px"},100);
+                            })
+                    jq(this).hover(
+                        function(){
+                            jq(this).children(".deanauthoravar").animate({left:"5px"},100);
+                        },
+                        function(){
+                            jq(this).children(".deanauthoravar").animate({left:"-50px"},100);
+                            })
+                    })
+    
+            </script>
+        </div>
+        <div class="deanbox2r deanhotmember">
+            <div class="deantitleh2"><span>本站优秀会员</span></div>
+            <div class="clear"></div>
+            <ul><!--[diy=deanhotmember]--><div id="deanhotmember" class="area"></div><!--[/diy]--><div class="clear"></div></ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <!--boxthree-->
+    <div class="deanbox3">
+        <div class="deanbox3l">
+            <div class="deantitle deantitlegame"><span>游戏</span><a href="#" target="_blank" class="deanmore">更多</a></div>
+            <div class="clear"></div>
+            <ul class="deangameul"><!--[diy=deangameul]--><div id="deangameul" class="area"></div><!--[/diy]--><div class="clear"></div></ul>
+        </div>
+        <div class="deanbox3r">
+            <div class="deantitleh2"><span>游戏排行榜</span></div>
+            <div class="clear"></div>
+            <div><!--[diy=deangameboxr]--><div id="deangameboxr" class="area"></div><!--[/diy]--></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <!--动画，动画排行榜-->
+    <div class="deanbox3">
+        <div class="deanbox3l">
+            <div class="deantitle deantitleanimate"><span><b>动画</b></span><a href="#" target="_blank" class="deanmore">更多</a></div>
+            <div class="clear"></div>
+            <ul class="deangameul"><!--[diy=deangameul1]--><div id="deangameul1" class="area"></div><!--[/diy]--><div class="clear"></div></ul>
+           
+        </div>
+        <div class="deanbox3r">
+            <div class="deantitleh2"><span>动画排行榜</span></div>
+            <div class="clear"></div>
+            <div><!--[diy=deangameboxr1]--><div id="deangameboxr1" class="area"></div><!--[/diy]--></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <!--宅圈，宅圈-->
+    <div class="deanbox3">
+        <div class="deanbox3l">
+            <div class="deantitle deantitlezhai"><span><b>宅圈</b></span><a href="#" target="_blank" class="deanmore">更多</a></div>
+            <div class="clear"></div>
+            <ul class="deangameul"><!--[diy=deangameul2]--><div id="deangameul2" class="area"></div><!--[/diy]--><div class="clear"></div></ul>
+        </div>
+        <div class="deanbox3r">
+            <div class="deantitleh2"><span>宅圈排行榜</span></div>
+            <div class="clear"></div>
+            <div><!--[diy=deangameboxr2]--><div id="deangameboxr2" class="area"></div><!--[/diy]--></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <!--鬼畜，鬼畜-->
+    <div class="deanbox3">
+        <div class="deanbox3l">
+            <div class="deantitle deantitlechu"><span><b>鬼畜</b></span><a href="#" target="_blank" class="deanmore">更多</a></div>
+            <div class="clear"></div>
+            <ul class="deangameul"><!--[diy=deangameul3]--><div id="deangameul3" class="area"></div><!--[/diy]--><div class="clear"></div></ul>
+        </div>
+        <div class="deanbox3r">
+            <div class="deantitleh2"><span>鬼畜排行榜</span></div>
+            <div class="clear"></div>
+            <div><!--[diy=deangameboxr3]--><div id="deangameboxr3" class="area"></div><!--[/diy]--></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <!--声音，声音-->
+    <div class="deanbox3">
+        <div class="deanbox3l">
+            <div class="deantitle deantitleyin"><span><b>声音</b></span><a href="#" target="_blank" class="deanmore">更多</a></div>
+            <div class="clear"></div>
+            <ul class="deangameul"><!--[diy=deangameul4]--><div id="deangameul4" class="area"></div><!--[/diy]--><div class="clear"></div></ul>
+        </div>
+        <div class="deanbox3r">
+            <div class="deantitleh2"><span>声音排行榜</span></div>
+            <div class="clear"></div>
+            <div><!--[diy=deangameboxr4]--><div id="deangameboxr4" class="area"></div><!--[/diy]--></div>
+        </div>
+        <div class="clear"></div>
+    </div>
+    
+    
+    
+    <script type="text/javascript">
+		jq(".deangameul li").each(function(s){
+			jq(this).hover(
+				function(){
+					jq(".deancoverinfo").eq(s).animate({bottom:"0"},100);
+				},
+				function(){
+					jq(".deancoverinfo").eq(s).animate({bottom:"-134px"},100);
+					})
+			})
+
+	</script>
+    
+</div>
+
+<div class="clear"></div>
+<script src="misc.php?mod=diyhelp&action=get&type=index&diy=yes&r={echo random(4)}" type="text/javascript"></script>
+<!--{template common/footer}-->

@@ -1,0 +1,129 @@
+@charset "utf-8";
+/*模板版权：迪恩网络有限公司*/
+/*QQ:1589787930*/
+
+/*common*/
+.deanborder{ border:1px solid #f2f2f2!important;} 
+.deanfff{ background:#fff;}
+.top15{ margin-top:15px!important;}
+.top25{ margin-top:20px!important;}
+.clear{ clear:both;}
+.top80{ padding-top:50px!important;}
+
+a{transition:all 0.2s linear;-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;-o-transition:all 0.2s linear;}
+.deanxz img{ transition:All 0.4s ease-in-out; -webkit-transition:All 0.4s ease-in-out; -moz-transition:All 0.4s ease-in-out; -o-transition:All 0.4s ease-in-out;}
+.deanxz:hover img{ transform:rotate(360deg); -webkit-transform:rotate(360deg); -moz-transform:rotate(360deg); -o-transform:rotate(360deg); -ms-transform:rotate(360deg);}
+.deanmove:hover {transform: translate(10px,0); -webkit-transform: translate(10px,0); -moz-transform: translate(10px,0); -o-transform: translate(10px,0); -ms-transform: translate(10px,0);}
+.deanmove { transition: All 0.4s ease-in-out; -webkit-transition: All 0.4s ease-in-out; -moz-transition: All 0.4s ease-in-out; -o-transition: All 0.4s ease-in-out;}
+.deanlarge img{transition: all 0.6s; -moz-transition: all 0.6s; -webkit-transition: all 0.6s; -o-transition: all 0.6s; }
+.deanlarge:hover img{transform: scale(1.2); -moz-transform: scale(1.2); -webkit-transform: scale(1.2); -o-transform: scale(1.2); -ms-transform: scale(1.2);}
+.deanwp,.wp{ width:1200px; margin:0 auto;}
+body{ font-family:microsoft yahei; background:#fff url({STYLEIMGDIR}/ibg.jpg) no-repeat 50% -81px; }
+.ct2_a .mn{ width:1040px!important;}
+/*header*/
+#toptb{ height:31px; width:100%; background:#f8f8f8; border-bottom:1px solid #ededed; }
+	#toptb .z a{ color:#60717e;}
+
+.deanheader{}
+	.deanlogo{ float:left;}
+	.deansearch{ float:left; margin-top:12px; margin-left:100px;}
+		#scbar{ border:1px solid #3bbcfb;  height:39px; line-height:39px;}
+			#scbar_txt{ border:0; font-family:microsoft yahei; color:#999!important; font-size:15px; width:350px; background:#fff; height:39px; line-height:39px; padding-left:40px; background:#fff url({STYLEIMGDIR}/searchbutton.png) 10px 10px no-repeat;}
+			#scbar_type{ padding:0 10px; background:#fff;}
+			#scbar_type_menu{ margin-top:0;}
+			#scbar_btn{ background:#3BBCFB; font-family:microsoft yahei; height:40px; width:80px; text-align:center; line-height:39px; font-size:18px; color:#fff; border:0; cursor:pointer;}
+			#scbar_btn:hover{ opacity:0.9;}
+	.deandenglu{ float:right; height:60px;}	
+	
+		
+	/*导航*/
+	#deanheader{ width:100%; height:50px; margin-top:20px;}
+		.deannav{ width:1200px; height:50px; background:#fff; margin:0 auto;  box-shadow:0px 3px 3px rgba(0,0,0,0.1);}
+			.deannav ul{ width:1100px; height:50px; overflow:hidden; white-space:nowrap;}
+				.deannav ul li{ float:left; height:47px; line-height:47px;}
+					.deannav ul li a{ display:block; padding:0 20px; height:47px; border-left:1px solid #fff; border-right:1px solid #fff; color:#333; font-size:16px; border-bottom:3px solid #fff;}
+				.deannav ul li.a a,.deannav ul li a:hover{ color:#3bbcfb; text-decoration:none; border-bottom:3px solid #3bbcfb; border-left:1px solid #eee; border-right:1px solid #eee;}
+				.deannav ul li span{ display:none;}
+
+	/*二级导航*/
+	#deansubnav .p_pop{ background:#fff; box-shadow:none; border:1px solid #eee; }
+		#deansubnav .p_pop a { display: block; height: 35px; line-height: 35px; font-size: 14px; padding: 0 10px; border-bottom:0; color:#333; border-bottom:1px dotted #eee;}
+		#deansubnav .p_pop a:hover{ background:#3bbcfb; color:#fff;}
+
+/*登录信息*/
+	.deanloginin{ color:#38485a; float:right; }
+		.deanavartop{ float:left; width:35px; height:60px; overflow:hidden;}
+			.deanavartop img{ width:30px; height:30px; border-radius:30px; margin-top:15px; transition:All 0.4s ease-in-out; -webkit-transition:All 0.4s ease-in-out; -moz-transition:All 0.4s ease-in-out; -o-transition:All 0.4s ease-in-out;}
+			.deanavartop a:hover img{ transform:rotate(360deg); -webkit-transform:rotate(360deg); -moz-transform:rotate(360deg); -o-transform:rotate(360deg); -ms-transform:rotate(360deg);}
+		.deanusername{ float:left; height:60px; line-height:60px; padding:0 5px;}
+			.deanusername .vwmy,.vwmyqq{ background:none; padding-left:0;}
+				.deanusername a{ color:#666; font-size:14px;}
+		.deantxs{ float:left; height:60px; line-height:60px; position:relative;}
+			.deantxs a{font-size:14px; color:#666;}
+			#myprompt.new{ background:none;}
+		.deaninfo{ float:left; position:relative; z-index:8; margin-left:5px;}
+			.deanhove{ width:40px; height:60px; background:url({STYLEIMGDIR}/seticon.png) center center no-repeat; cursor:pointer;}
+			.deanhoved{ background:#3BBCFB url({STYLEIMGDIR}/seticonhover.png) center center no-repeat; }
+			.deanmessage{ background:#3BBCFB; padding:10px; padding-top:0; position:absolute; top:60px; left:0; z-index:9; display:none;  opacity:0.95; filter:alpha(opacity=95;)}
+				.deanhoved{}
+				.deanmessage ul{ width:100px;}
+					.deanmessage ul li{ height:26px; line-height:26px; display:block; border-bottom:1px solid #3BBCFB;}
+						.deanmessage ul li a{ font-size:14px; color:#fff; text-decoration:none;}
+						.deanlogin .pipe{ display:none;} 
+						.deanlogin ul li a{ padding:0;}
+								
+				.deanexit{ float:left; width:20px; height:60px; margin-left:5px; overflow:hidden; }
+					.deanexit a{ display:block; width:20px; height:60px; background:url({STYLEIMGDIR}/exit.png) center center no-repeat; cursor:pointer;}
+					
+	
+	
+		.deanunlogin{ height:45px; margin-top:12px; position:relative; z-index:3;}
+			.deanunlogin ul{ float:left;}
+			.deanunlogin ul li{ float:left;}
+				.deanunlogin ul li a{ float:right; height:40px; line-height:40px; display:block; font-size:14px; color:#999;}
+				.deanunlogin ul li a.deandenglu{ background:url({STYLEIMGDIR}/denglu.png) 0 13px no-repeat; text-indent:22px; margin-right:20px;}
+				.deanunlogin ul li a.deanzhuce{ background:url({STYLEIMGDIR}/zhuce.png) 0 13px no-repeat; text-indent:19px; margin-right:20px;}
+			.deanunlogin span{ display:block; width:30px; height:30px; position:relative; z-index:3; border-radius:30px; margin-top:6px; background:url({STYLEIMGDIR}/pic0.jpg) 0 0px no-repeat; margin-right:10px; cursor:pointer; float:left;}
+				.deankjdl{float:left; display:none; position:absolute; z-index:2; left:0; top:30px; width:100px; }
+					.deanarrowtops{ width:10px; height:8px; background:url({STYLEIMGDIR}/arrowtops.png) 0 0 no-repeat; position:absolute; z-index:3; top:1px; left:10px;}
+				.deanunlogin dl{ background:#fff; border:1px solid #f0f0f0; margin-top:7px; width:100px; padding:5px 15px;}
+					.deanunlogin dl dd{ height:30px; line-height:30px; margin-top:5px; padding-bottom:5px; border-bottom:1px dotted #e6e6e6; font-size:12px; text-indent:30px;}
+						.deanunlogin dl dd a{ color:#333; display:block;}
+						.deanunlogin dl dd.deanqq a{ background:url({STYLEIMGDIR}/qqhover.png) 0 5px no-repeat; text-indent:25px;}
+						.deanunlogin dl dd.deansina a{ background:url({STYLEIMGDIR}/sinahover.png) 0 5px no-repeat;}
+						.deanunlogin dl dd.deanwx a{ background:url({STYLEIMGDIR}/wx.png) 0 5px no-repeat;}
+						.deanunlogin dl dd a:hover{color:#288ce6;}
+/*快捷导航*/
+
+#qmenu{ width: 31px; height: 26px; line-height: 26px; margin: 9px 10px 0 0; padding: 0; border-top: 1px solid transparent; border-left: 1px solid transparent; border-radius: 2px; background:#ececec url({STYLEIMGDIR}/qmenu_xiaomi.png) center no-repeat; text-indent: -9999px;}
+.ie6 #qmenu,.ie7 #qmenu{ border:0;}
+#qmenu.a { border-color:#3bbcfb; background:#3bbcfb url({STYLEIMGDIR}/qmenu_xiaomi.png) center no-repeat;}
+#qmenu_menu{ margin-top:2px; box-shadow:0 0 0 #fff; border-radius:2px; border:1px solid #eee; }
+
+/*footer*/
+.deanfooter{ background:#f1f1f1; border-top:1px solid #e6e6e6; margin-top:30px;} 
+	.deanfttop{ width:1200px; margin:0 auto; padding-top:20px;}
+		.deanfttop h3{ height:35px; line-height:35px; font-size:16px; color:#999; font-weight:normal;}
+		.deanftl{ float:left; width:600px; white-space:nowrap;}
+			.deanftl ul{ white-space:nowrap; width:550px;}
+				.deanftl ul li{ font-size:14px; height:30px; float:left; line-height:30px; margin-right:30px;}
+					.deanftl ul li a{ color:#333;}
+					.deanftl ul li a:hover{ color:#3bbcfb;}
+		.deanftc{ float:left; width:380px;}
+			.deanftc ul{ white-space:nowrap;}
+				.deanftc ul li{ font-size:14px; height:30px; float:left; line-height:30px; margin-right:30px;}
+					.deanftc ul li a{ color:#333;}
+					.deanftc ul li a:hover{  color:#3bbcfb;}
+		.deanftr{ float:right; width:170px; height:40px; line-height:40px;}
+			.deanftr span{ float:left; font-size:16px; color:#999;}
+			.deanftr .deansina{ position:relative; float:left; display:block; width:40px; height:40px; background:url({STYLEIMGDIR}/c_ico.png) 0 -650px no-repeat;}
+			.deanftr .deansina:hover{ background:url({STYLEIMGDIR}/c_ico.png) 0 -570px no-repeat;}
+				.deanftr .deansina em{ display:none; position:absolute; left:0; top:50px; border:3px solid #fff;}
+			.deanftr .deanwx{ position:relative; float:left; display:block; width:40px; height:40px; margin-left:5px; background:url({STYLEIMGDIR}/c_ico.png) 0 -690px no-repeat;}
+			.deanftr .deanwx:hover{background:url({STYLEIMGDIR}/c_ico.png) 0 -610px no-repeat;}
+				.deanftr .deanwx em{ display:none;  position:absolute; right:0; top:50px; border:3px solid #fff;}
+	.deanftbottom{ text-align:center; padding:20px 0; color:#999; font-size:13px; border-top:1px solid #ddd; width:1200px; margin:0 auto; margin-top:20px; }
+		.deanftbottom a{ color:#999;}
+
+/*home页面*/
+.ct3_a{ background:#fff; border:1px solid #e6e6e6;}
